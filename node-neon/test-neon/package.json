@@ -1,0 +1,23 @@
+{
+  "name": "test-neon",
+  "version": "0.1.0",
+  "description": "test neon rust node bindings",
+  "main": "app.js",
+  "author": "Kyle Reczek <kyle@banyango.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.2.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.3.5",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "ffi": "^2.3.0",
+    "jade": "~1.11.0",
+    "morgan": "^1.9.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "scripts": {
+    "install": "neon build",
+    "start": "node ./bin/www"
+  }
+}

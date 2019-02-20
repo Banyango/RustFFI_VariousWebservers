@@ -1,0 +1,8 @@
+[package]
+name = "rust-webserver"
+version = "0.1.0"
+authors = ["Kyle Reczek <kyle@banyango.com>"]
+edition = "2018"
+
+[dependencies]
+nickel = "0.11.0"

@@ -1,0 +1,178 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande-Bold;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9360\viewh8760\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs26 \cf0 Node
+\f1\b0 \
+Running 30s test @ http://127.0.0.1:3000/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    95.50ms   13.82ms 176.95ms   87.66%\
+    Req/Sec   328.75     50.76   550.00     81.56%\
+  117788 requests in 30.09s, 25.72MB read\
+  Socket errors: connect 0, read 373, write 0, timeout 0\
+Requests/sec:   3914.13\
+Transfer/sec:      0.85MB\
+\'97\'97\'97\
+Running 30s test @ http://127.0.0.1:3000/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency   104.96ms   11.58ms 199.68ms   85.04%\
+    Req/Sec   302.81     48.92   490.00     85.69%\
+  108484 requests in 30.11s, 23.69MB read\
+  Socket errors: connect 0, read 411, write 0, timeout 0\
+Requests/sec:   3603.51\
+Transfer/sec:    805.86KB\
+\
+
+\f0\b Node + Neon\
+\
+
+\f1\b0 Running 30s test @ http://localhost:3000/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    95.68ms   14.04ms 304.29ms   83.53%\
+    Req/Sec   324.44     56.40   590.00     81.76%\
+  116354 requests in 30.09s, 25.41MB read\
+  Socket errors: connect 0, read 364, write 0, timeout 0\
+Requests/sec:   3867.18\
+Transfer/sec:    864.83KB\
+\
+Running 30s test @ http://localhost:3000/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    95.43ms   10.83ms 254.88ms   85.35%\
+    Req/Sec   335.63     40.60   520.00     80.06%\
+  120547 requests in 30.10s, 26.33MB read\
+  Socket errors: connect 0, read 283, write 0, timeout 0\
+Requests/sec:   4004.67\
+Transfer/sec:      0.87MB\
+
+\f0\b \
+Python - Flask
+\f1\b0 \
+\
+Running 30s test @ http://127.0.0.1:5000/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency   113.95ms   15.45ms 210.91ms   91.24%\
+    Req/Sec    90.11     34.58   181.00     67.47%\
+  16578 requests in 30.06s, 2.61MB read\
+  Socket errors: connect 156, read 1375, write 16, timeout 0\
+Requests/sec:    551.52\
+Transfer/sec:     88.87KB\
+\'97\'97\'97\'97\'97\
+Running 30s test @ http://127.0.0.1:5000/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency   113.79ms   12.56ms 166.18ms   94.90%\
+    Req/Sec    90.81     42.95   210.00     65.80%\
+  16582 requests in 30.06s, 2.61MB read\
+  Socket errors: connect 181, read 1471, write 12, timeout 0\
+Requests/sec:    551.55\
+Transfer/sec:     88.87KB\
+\
+
+\f0\b with wgsi
+\f1\b0 \
+Running 30s test @ http://127.0.0.1:8000/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    92.06ms   11.06ms 123.22ms   94.99%\
+    Req/Sec   107.55     40.86   202.00     68.61%\
+  16584 requests in 30.10s, 2.70MB read\
+  Socket errors: connect 179, read 1346, write 8, timeout 0\
+Requests/sec:    550.88\
+Transfer/sec:     91.99KB\
+\'97\'97\'97\
+Running 30s test @ http://127.0.0.1:8000/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    92.29ms   14.90ms 233.92ms   94.68%\
+    Req/Sec   107.57     44.50   272.00     70.08%\
+  16564 requests in 30.07s, 2.70MB read\
+  Socket errors: connect 189, read 1315, write 7, timeout 0\
+Requests/sec:    550.87\
+Transfer/sec:     91.99KB\
+\
+
+\f0\b Rust - Nickel \
+\
+
+\f1\b0 Running 30s test @ http://127.0.0.1:6767/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency   226.32us  404.65us  77.27ms   99.74%\
+    Req/Sec    21.08k     8.95k   36.73k    68.67%\
+  1258284 requests in 30.02s, 175.20MB read\
+  Socket errors: connect 0, read 634, write 0, timeout 0\
+Requests/sec:  41912.53\
+Transfer/sec:      5.84MB\
+\
+
+\f0\b spring boot 
+\f1\b0 \
+\
+Running 30s test @ http://localhost:8080/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    91.04ms  153.60ms   1.51s    90.88%\
+    Req/Sec   720.56    351.28     4.39k    64.09%\
+  251123 requests in 30.08s, 32.61MB read\
+  Socket errors: connect 0, read 348, write 0, timeout 0\
+Requests/sec:   8348.48\
+Transfer/sec:      1.08MB\
+\
+Running 30s test @ http://localhost:8080/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    13.59ms   10.35ms 168.64ms   84.60%\
+    Req/Sec     2.42k   763.33    16.92k    86.60%\
+  864258 requests in 30.09s, 112.25MB read\
+  Socket errors: connect 0, read 351, write 0, timeout 0\
+Requests/sec:  28718.38\
+Transfer/sec:      3.73MB\
+\
+Running 30s test @ http://localhost:8080/fib?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    13.34ms    9.68ms 121.61ms   85.01%\
+    Req/Sec     2.47k   751.69    15.06k    86.39%\
+  885054 requests in 30.08s, 114.95MB read\
+  Socket errors: connect 0, read 283, write 0, timeout 0\
+Requests/sec:  29426.32\
+Transfer/sec:      3.82MB\
+\
+\'97\'97\'97\'97\
+Running 30s test @ http://localhost:8080/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    65.15ms   93.58ms   1.06s    89.36%\
+    Req/Sec   821.47    353.29     2.85k    63.73%\
+  288746 requests in 30.08s, 37.50MB read\
+  Socket errors: connect 0, read 435, write 0, timeout 0\
+Requests/sec:   9599.40\
+Transfer/sec:      1.25MB\
+\
+Running 30s test @ http://localhost:8080/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    24.72ms   21.49ms 207.10ms   86.20%\
+    Req/Sec     1.45k   388.90     7.04k    78.71%\
+  520508 requests in 30.10s, 67.60MB read\
+  Socket errors: connect 0, read 367, write 1, timeout 0\
+Requests/sec:  17294.46\
+Transfer/sec:      2.25MB\
+\
+Running 30s test @ http://localhost:8080/fib-opt?i=50\
+  12 threads and 400 connections\
+  Thread Stats   Avg      Stdev     Max   +/- Stdev\
+    Latency    15.23ms   11.42ms 175.62ms   82.85%\
+    Req/Sec     2.21k   631.27    13.47k    86.44%\
+  792977 requests in 30.09s, 102.99MB read\
+  Socket errors: connect 0, read 341, write 0, timeout 0\
+Requests/sec:  26350.90\
+Transfer/sec:      3.42MB}
